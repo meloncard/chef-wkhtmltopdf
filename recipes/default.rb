@@ -2,10 +2,12 @@ cache_dir = Chef::Config[:file_cache_path]
 download_dest = File.join(cache_dir, "wkhtmltopdf.tar.bz2")
 binary_name = node[:wkhtmltopdf][:binary_name]
 
+Chef::Log.info([ "Platform Family", node['platform_family'] ])
+
 case node['platform_family']
 when 'debian'
   packages = %w(libxrender1 libxext6 libfontconfig1)
-when 'redhat'
+when 'rhel'
   packages = %w(libXrender libXext urw-fonts openssl-devel fontconfig-devel)
 end
 
