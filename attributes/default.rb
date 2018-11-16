@@ -6,5 +6,5 @@ else
 	default[:wkhtmltopdf][:arch] = 'i386'
 end
 
-default[:wkhtmltopdf][:static_download_url] = "https://github.com/wkhtmltopdf/obsolete-downloads/releases/download/linux/wkhtmltopdf-#{node[:wkhtmltopdf][:version]}-static-#{node[:wkhtmltopdf][:arch]}.tar.bz2"
-default[:wkhtmltopdf][:binary_name] = "wkhtmltopdf-#{node[:wkhtmltopdf][:arch]}"
+default[:wkhtmltopdf][:static_download_url] = "https://github.com/wkhtmltopdf/obsolete-downloads/releases/download/linux/wkhtmltopdf-0.9.9-static-amd64.tar.bz2"
+default[:wkhtmltopdf][:binary_name] = "wkhtmltopdf-0.9.9-static-amd64.tar.bz2"
